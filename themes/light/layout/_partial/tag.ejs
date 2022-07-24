@@ -1,9 +1,9 @@
 <section class="archive">
-  <ul class="post-archive">
+  <ul class="post-archive tag">
     <% site.tags.each(function (tag) { %>
-      <span>
+      <div class="tag-name post-name">
         <%= tag.name %>
-      </span>
+      </div>
       <% tag.posts.forEach(function(post) { %>
         <li class="post-item">
           <span class="post-date">

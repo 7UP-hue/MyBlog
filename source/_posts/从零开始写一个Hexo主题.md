@@ -6,12 +6,14 @@ tags:
 - CSS
 categories: Tech
 ---
+介绍：从零开始写一个hexo主题的步骤
+<!-- more -->
 #### 前言
 写作目的：
 作为一名前端学习者，想试一下自己写一个Hexo主题
 在这里我将记录自己的学习过程以及遇到的问题和解决方式
 好像我最初搭建这个博客平台的目的就不是写博客，而是为了做一个自己的、好看的网站，但是在网上看了一圈，大部分博客网站都是运用各种现有的主题制作的，感觉没有很大的学习价值，于是我决定，自己也学着写一个主题
-<!-- more -->
+
 #### 目录结构
 在`thems`目录下新建一个`theme-name`(你的主题名字）文件夹，一个主题主要有以下结构：
 ```
@@ -67,7 +69,7 @@ categories: Tech
 <h1>Hello World</h1>
 ```
 将这些文件全部添加完后我们的网站将会是这样
-![img](/source/images/begin.png)
+<img src="https://img-blog.csdnimg.cn/b0ab11db523247a393296d45e3fb184f.png" width=700>
 
 #### 编写导航栏和底部信息
 ##### 编写`layout/_partial/head.ejs`信息
@@ -128,7 +130,7 @@ categories: Tech
 注意这里的`Theme-name`需要更换为你的主题名字
 
 到这里我们就得到了一个包含导航栏和底部信息的简单页面
-![img](/source/images/three.png)
+![img](https://img-blog.csdnimg.cn/54f093753b4b4676b0be9d8d4c98741f.png)
 #### 文章列表
 接下来完善首页，使其能显示文章列表。
 这里我们要用到`page`变量的`posts`属性拿到文章的数据集合。
@@ -304,3 +306,63 @@ categories: Tech
   </div>
 </article>
 ```
+#### 关于代码高亮
+不知道是之前误操作还是怎么的，我发现我的博客内容页中代码高亮失效了。在网上百度了一翻，总算是解决了。
+一般情况下`hexo`提供两种高亮方式，`highlight.js`与`prism.js`，这里我选择的是`prism.js`
+##### 下载prism
+前去官网[https://prismjs.com/download.html](https://prismjs.com/download.html)选择喜欢的主题以及需要的语言，点击下面的两个按钮即可下载`prism.js`以及`prism.css`两个文件
+点击预览并选择主题
+<img src="https://img-blog.csdnimg.cn/17ad3520647242c4bcb12770b8de89e6.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAc21pbGUteWFu,size_20,color_FFFFFF,t_70,g_se,x_16" width=700>
+
+选择自己需要的语言
+<img src="https://img-blog.csdnimg.cn/7482bc20beb0426e80996a804a5b777a.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAc21pbGUteWFu,size_20,color_FFFFFF,t_70,g_se,x_16" width=700>
+
+选择自己需要的插件
+<img src="https://img-blog.csdnimg.cn/be356de7a8ab442591af5b53e5d2f35a.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAc21pbGUteWFu,size_20,color_FFFFFF,t_70,g_se,x_16" width=700>
+
+#### 引入
+下载得到css和js文件后分别放到主题的`source/js`和`source/css`目录下
+在`header.ejs`中引入这两个文件
+```ejs
+<%- css('css/prism')  %> 
+<%- js('js/prism.js') %>
+```
+#### 更改默认配置
+```yml
+# _config.yml
+highlight:
+  enable: true ##enable表示是否启用
+  auto_detect: false
+  line_number: true
+  tab_replace: ''
+  wrap: true
+  hljs: false
+prismjs:
+  enable: false
+  preprocess: true
+  line_number: true
+  tab_replace: ''
+```
+以上为`Hexo`的默认配置，`highlight`默认开启，因此我们需要将`highlight`关闭，开启`prismjs`
+```yml
+# _config.yml
+highlight:
+  enable: false
+  # line_number: true
+  # auto_detect: false
+  # tab_replace: ''
+  # wrap: true
+  # hljs: false
+prismjs:
+  enable: true
+  preprocess: true
+  line_number: true
+  tab_replace: ''
+```
+更改后
+这时我们再运行`hexo clean`，`hexo g`，`hexo s`重启项目即可看到代码高亮成功
+
+参考文章：
+[https://blog.csdn.net/smileyan9/article/details/124333810](https://blog.csdn.net/smileyan9/article/details/124333810)
+[https://www.w3cschool.cn/hexodocument/hexodocument-6m483cn4.html](https://www.w3cschool.cn/hexodocument/hexodocument-6m483cn4.html)
+##### 

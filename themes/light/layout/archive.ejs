@@ -1,14 +1,36 @@
 <section class="archive">
   <ul class="post-archive">
-    <% page.posts.each(function (post) { %>
-    <li class="post-item">
-      <span class="post-date">
-        <%= date(post.date, "YYYY-MM-DD") %>
-      </span>
-      <a class="post-title" href="<%- url_for(post.path) %>">
-        <%= post.title %>
-      </a>
-    </li>
+    <% var last_year; %>
+    <% var last_month; %>
+    <% page.posts.each(function (post, i) { %>
+      <% var year = post.date.year(); %>
+      <% var month = post.date.month()+1; %>
+      <% if (last_year != year || last_month != month){ %>
+        <% if (last_year != null && last_month != null){ %>
+        </div>
+        <% } %>
+      <% last_year = year; %>
+      <% last_month = month; %>
+        <div class="year-items">
+          <!-- <a class="post-title" href="<%- url_for(post.path) %>">
+            <%= post.title %>
+          </a> -->
+          <a href="<%- url_for(config.archive_dir + '/' + year) %>" class="post-name"><%= year + '-' + month %></a>
+        <div class="archive-items">
+      <% } %>
+      <li>
+        <span>
+          <%= date(post.date, "YYYY-MM-DD") %>
+        </span>
+        <span>
+          <a class="post-title" href="<%- url_for(post.path) %>">
+            <%= post.title %>
+          </a>
+        </span>
+      </li>
     <% }) %>
+    <% if (page.posts.length){ %>
+      </div>
+    <% } %>
   </ul>
 </section>

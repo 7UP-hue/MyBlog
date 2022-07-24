@@ -1,6 +1,6 @@
-<% if (is_current(theme.menu.categories)) { %>
+<% if (is_current(theme.menu.分类)) { %>
   <%- partial('_partial/category') %>
-<% } else if (is_current(theme.menu.tags)) { %>
+<% } else if (is_current(theme.menu.标签)) { %>
   <%- partial('_partial/tag') %>
 <% } else { %>
   <%- partial('_partial/custom') %>
