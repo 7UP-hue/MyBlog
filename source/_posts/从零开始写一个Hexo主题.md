@@ -11,6 +11,7 @@ categories: Tech
 作为一名前端学习者，想试一下自己写一个Hexo主题
 在这里我将记录自己的学习过程以及遇到的问题和解决方式
 好像我最初搭建这个博客平台的目的就不是写博客，而是为了做一个自己的、好看的网站，但是在网上看了一圈，大部分博客网站都是运用各种现有的主题制作的，感觉没有很大的学习价值，于是我决定，自己也学着写一个主题
+<!-- more -->
 #### 目录结构
 在`thems`目录下新建一个`theme-name`(你的主题名字）文件夹，一个主题主要有以下结构：
 ```
@@ -153,6 +154,8 @@ categories: Tech
   <% }) %>
 </section>
 ```
+由于首页显示文章内容时使用的是`post.content`，即文章的全部内容，有时候我们并不想再首页显示全部内容，这时我们可以将`post.content`改成`post.excerpt`
+`post.excerpt`表示文章的摘录部分。我们在文章中添加一个`<!--more-->`标记，之后，`post.excerpt`将会截取标记之前的内容。
 #### 添加样式
 到这里，我们的框架以及大致内容显示已经完成了，但是由于没有设置样式，现在我们的网站还很丑。于是终于到了最激动人心的一刻了！我们开始添加css样式文件来美化我们的页面。
 我们只需要将样式文件放到`css`文件夹中。Hexo在生成文件时会将`source`中的文件赋值到生产的`public`文件夹中，并将`styl`文件编译成`css`文件。
@@ -189,5 +192,115 @@ categories: Tech
   <%- css('css/style.styl') %>
 </head>
 ```
-
-
+#### 添加文章详情页
+新建`post.ejs`
+```ejs
+<article class="post">
+  <div class="post-title">
+    <h2 class="title">
+      <%= page.title %>
+    </h2>
+  </div>
+  <div class="post-meta">
+    <span class="post-time">
+      <%- date(page.date, "YYYY-MM-DD") %>
+    </span>
+  </div>
+  <div class="post-content">
+    <%- page.content %>
+  </div>
+</article>
+```
+#### 添加归档页
+新建`archive.ejs`
+```ejs
+<section class="archive">
+  <ul class="post-archive">
+    <% page.posts.each(function (post) { %>
+    <li class="post-item">
+      <span class="post-date">
+        <%= date(post.date, "YYYY-MM-DD") %>
+      </span>
+      <a class="post-title" href="<%- url_for(post.path) %>">
+        <%= post.title %>
+      </a>
+    </li>
+    <% }) %>
+  </ul>
+</section>
+```
+#### 添加分类页
+新建自定义页面模板`page.ejs`
+```ejs
+<% if (is_current(theme.menu.categories)) { %>
+  <%- partial('_partial/category') %>
+<% } else if (is_current(theme.menu.tags)) { %>
+  <%- partial('_partial/tag') %>
+<% } else { %>
+  <%- partial('_partial/custom') %>
+<% } %>
+```
+新建`_partial/category.ejs`
+```ejs
+<section class="archive">
+  <ul class="post-archive">
+    <% site.categories.each(function (category) { %>
+      <span>
+        <%= category.name %>
+      </span>
+      <% category.posts.forEach(function(post) { %>
+      <li class="post-item">
+        <span class="post-date">
+          <%= date(post.date, "YYYY-MM-DD") %>
+        </span>
+        <a class="post-title" href="<%- url_for(post.path) %>">
+          <%= post.title %>
+        </a>
+      </li>
+      <% }) %>
+    <% }) %>
+  </ul>
+</section>
+```
+#### 添加标签页
+新建`_partial/tag.ejs`
+```ejs
+<section class="archive">
+  <ul class="post-archive">
+    <% site.tags.each(function (tag) { %>
+      <span>
+        <%= tag.name %>
+      </span>
+      <% tag.posts.forEach(function(post) { %>
+        <li class="post-item">
+          <span class="post-date">
+            <%= date(post.date, "YYYY-MM-DD") %>
+          </span>
+          <a class="post-title" href="<%- url_for(post.path) %>">
+            <%= post.title %>
+          </a>
+        </li>
+      <% }) %>
+    <% }) %>
+  </ul>
+</section>
+```
+#### 添加自定义页面
+新建`_partial/custom.ejs`
+```ejs
+<article class="post">
+  <div class="post-title">
+    <h2 class="title">
+      <%= page.title %>
+    </h2>
+  </div>
+  <div class="post-meta">
+    <span class="post-time">
+      <%- date(page.date, "YYYY-MM-DD") %>
+    </span>
+  </div>
+  <div class="post-content">
+    <%- page.content %>
+  </div>
+</article>
+```

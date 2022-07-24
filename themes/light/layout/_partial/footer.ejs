@@ -1,30 +1,21 @@
-<!-- <footer id="footer">
-  <% if (theme.sidebar === 'bottom'){ %>
-    <%- partial('_partial/sidebar') %>
-  <% } %>
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br>
-      <%= __('powered_by') %> <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
+<footer class="footer">
+  <div class="f-center">
+    <p class="author">
+      Theme is 
+      <a href="/" target="_blank" class="footer-link">
+        light
+      </a> 
+      by 
+      <a href="<%= config.url %>" target="_blank" class="footer-link">
+        <%= config.author %>
+      </a>
+    </p>    
+    <p class="powered">
+      Powered by 
+      <a href="https://hexo.io/" target="_blank" rel="nofollow" class="footer-link">
+        hexo
+      </a> 
+      &copy; <%- date(Date.now(), 'YYYY') %>
+    </p>
   </div>
-</footer> -->
-<footer>
-  <p>
-    Theme is 
-    <a href="/" target="_blank">
-      light
-    </a> 
-    by 
-    <a href="<%= config.url %>" target="_blank">
-      <%= config.author %>
-    </a>
-  </p>    
-  <p>
-    Powered by 
-    <a href="https://hexo.io/" target="_blank" rel="nofollow">
-      hexo
-    </a> 
-    &copy; <%- date(Date.now(), 'YYYY') %>
-  </p>
 </footer>
