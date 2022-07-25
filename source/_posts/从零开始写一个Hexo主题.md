@@ -365,4 +365,9 @@ prismjs:
 参考文章：
 [https://blog.csdn.net/smileyan9/article/details/124333810](https://blog.csdn.net/smileyan9/article/details/124333810)
 [https://www.w3cschool.cn/hexodocument/hexodocument-6m483cn4.html](https://www.w3cschool.cn/hexodocument/hexodocument-6m483cn4.html)
-##### 
+
+#### 部署时遇到的坑
+
+#### 关于链接
+在本地运行时，我的`<a></a>`链接默认都是在当前窗口打开，但是部署到github上后，它们就变成了在新窗口打开链接
+因此需要手动给每个`a`标签设置`target="_self`

@@ -15,7 +15,9 @@
           <!-- <a class="post-title" href="<%- url_for(post.path) %>">
             <%= post.title %>
           </a> -->
-          <a href="<%- url_for(config.archive_dir + '/' + year) %>" class="post-name"><%= year + '-' + month %></a>
+          <a href="<%- url_for(config.archive_dir + '/' + year) %>" class="post-name" target="_self">
+            <%= year + '-' + month %>
+          </a>
         <div class="archive-items">
       <% } %>
       <li>
@@ -23,7 +25,7 @@
           <%= date(post.date, "YYYY-MM-DD") %>
         </span>
         <span>
-          <a class="post-title" href="<%- url_for(post.path) %>">
+          <a class="post-title" href="<%- url_for(post.path) %>" target="_self">
             <%= post.title %>
           </a>
         </span>
