@@ -371,3 +371,17 @@ prismjs:
 #### 关于链接
 在本地运行时，我的`<a></a>`链接默认都是在当前窗口打开，但是部署到github上后，它们就变成了在新窗口打开链接
 因此需要手动给每个`a`标签设置`target="_self`
+
+#### 关于图标
+增加一些图标让你的网站更好看趴~
+这里我选择的是[Font Awesome](https://fontawesome.com/)
+注册账户并登录，在你的`head.ejs`文件中加上
+```js
+<script src="https://kit.fontawesome.com/487be84f99.js" crossorigin="anonymous"></script>
+```
+这样就可以选择你喜欢的图标然后使用啦
+示例
+```html
+<!-- .ejs文件 -->
+<i class="fa-solid fa-angle-down"></i>
+```
