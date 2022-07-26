@@ -1,16 +1,20 @@
 .posts {
   padding: 20px;
-  background-color: rgba(255,255,255,0.9);
+  background-color: rgba(255,255,255,1);
   border-radius: 5px;
   min-height: 65vh;
   margin-bottom: 20px;
 }
 .post {
-  border: 1px solid #aaa;
-  margin-bottom: 20px;
+  border: 1px solid #cecece;
+  margin-bottom: 30px;
   border-radius: 5px;
   padding: 20px;
-  box-shadow: 5px 10px 5px #aaa;
+  box-shadow: 5px 5px 10px #cecece;
+  transition: all .5s;
+}
+.post:hover {
+  box-shadow: 5px 13px 10px #cecece;
 }
 .post-title-link {
   color: #333;
@@ -46,18 +50,21 @@
   padding: 3px 8px;
   border: 1px solid #999;
   border-radius: 3px;
+  transition: all .5s;
 }
 .read-all:hover {
-  background-color: #efefef;
+  background-color: #eee;
   border-bottom-color: rgb(231,107,104);
 }
 .show-sth {
-  height: 90vh;
+  height: 100vh;
   position: relative;
+  margin-top: -80px;
+  text-align: center;
 }
 .show-title {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 0;
   right: 0;
   color: #FFF;
@@ -74,3 +81,25 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.scroll-down
+  position: absolute
+  bottom: 10px
+  font-size: 40px
+  color: #ccc
+  padding-left: 30px
+  padding-right: 30px
+  cursor: pointer
+  margin-left: -30px
+  transition: all .7s
+.scroll-down:hover
+  bottom: 20px
+.scroll-down-effects
+  animation: scroll-down-effect 2s infinite
+  @keyframes scroll-down-effect
+    0%
+      opacity: 1
+    50%
+      opacity: .4
+    100%
+      opacity: 1
+
