@@ -10,18 +10,18 @@ body {
 }
 .w-bg {
   height: 100vh;
-  width: 100vw;
-  position: fixed;
+  width: 100%;
+  position: absolute;
   top: 0;
   left: 0;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-  z-index: -10;
 }
 .container {
   min-height: 100%;
   height: auto !important;
   height: 100%;
   position: relative;
+  background: #F4F4F4;
 }
 .layout-body {
   padding-bottom: 100px;
@@ -44,8 +44,8 @@ body {
   font-size: 30px
   transition: all .5s
   display: none
+  cursor pointer
 .scroll-top:hover
-  color: #fff
   font-size: 40px
   right: 46px
   bottom: 35px
