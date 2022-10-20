@@ -10,7 +10,7 @@ $(function(){
    */
   $('.scroll-top').on('click', function(){
     var currentPath = window.location.pathname
-    if(currentPath === '/7UP-hue/') {
+    if(currentPath === '/7UP-hue/' || currentPath === '/') {
       $('html,body').animate({'scrollTop':$(window).height()-80},800)
     }
     else {
@@ -23,7 +23,7 @@ $(function(){
   $(window).scroll(function(event){
     var currentPath = window.location.pathname
     var pos = $(window).scrollTop()
-    if(currentPath === '/7UP-hue/') {
+    if(currentPath === '/7UP-hue/' || currentPath === '/') {
         if(pos >= $(window).height()-80) {
         $('.scroll-top').show()
         $('.header').addClass('header-last')
