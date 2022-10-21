@@ -1,47 +1,5 @@
-<div class="w-bg">
-  <div id="stars"></div>
-  <div id="stars2"></div>
-  <div id="stars3"></div>
+<%- partial('star-bg') %>
+<div class="index-continer" style="display: flex; justify-content: space-between">
+  <div style="width: 20%"><%- partial('_partial/aside') %></div>
+  <div style="width: 80%"><%- partial('_partial/article') %></div>
 </div>
-<div class="show-sth">
-  <div class="show-title">
-    <span>
-      Live a good life meet slowly
-    </span>
-    <br>
-  </div>
-  <span class="scroll-down"><i class="fa-solid fa-angle-down scroll-down-effects"></i></span>
-</div>
-<section class="posts">
-  <% page.posts.each(function (post) { %>
-    <article class="post">
-      <div class="post-header">
-        <div class="post-name">
-          <a class="post-title-link" href="<%- url_for(post.path) %>" target="_self">
-            <%= post.title %>
-          </a>
-        </div>
-        <span class="read-all">
-          <a class="post-title-link" href="<%- url_for(post.path) %>" target="_self">
-            阅读全文>
-          </a>
-        </span>
-      </div>
-      <div class="post-meta">
-        <span class="post-time">
-          <%- date(post.date, "YYYY-MM-DD") %>
-        </span>
-      </div>
-      <div class="post-excerpt">
-        <%- post.excerpt %>
-      </div>
-      <div class="page-tags">
-        <% post.tags.each(function (tag) { %>
-          <span class="tag-items">
-            <%= tag.name %>
-          </span>
-        <% }) %>
-      </div>
-    </article>
-  <% }) %>
-</section>
