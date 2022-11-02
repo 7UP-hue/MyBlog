@@ -5,9 +5,10 @@
   margin-bottom: 20px;
 }
 .post {
-  border: 1px solid #eee;
+  border: 1px solid #ddd;
+  box-shadow: 0px 2px 4px 4px #ddd;
   margin-bottom: 30px;
-  border-radius: 5px;
+  border-radius: 8px;
   padding: 20px;
   background: #fff;
   transition: all .5s;
@@ -30,14 +31,17 @@
   margin: 0;
 }
 .page-tags {
-  margin-top: 8px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed #ccc;
   font-size: 16px;
 }
 .tag-items {
   padding: 2px 7px;
-  background-color: rgb(231,107,104);
-  margin-right: 5px;
-  color: #fff;
+  background-color: #D8ECE3;
+  margin-right: 15px;
+  font-size:  14px;
+  color: #999;
   border-radius: 3px;
 }
 .post-header {
@@ -46,14 +50,19 @@
 }
 .read-all {
   font-size: 14px;
-  padding: 3px 8px;
+  height:  35px;
+  line-height: 35px;
+  padding: 0px 8px;
   border: 1px solid #999;
   border-radius: 3px;
   transition: all .5s;
 }
 .read-all:hover {
-  background-color: #eee;
-  border-bottom-color: rgb(231,107,104);
+  background-color: #54BBA4;
+  border: 1px solid #54BBA4;
+}
+.read-all:hover a {
+  color: #fff;
 }
 .show-sth {
   height: 100vh;
