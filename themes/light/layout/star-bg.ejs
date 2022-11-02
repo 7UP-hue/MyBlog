@@ -5,10 +5,21 @@
 </div>
 <div class="show-sth">
   <div class="show-title">
-    <span>
-      Live a good life meet slowly
-    </span>
+    <div class="title-rase-in">
+      <% var content = 'Live a good life meet slowly' %>
+      <% for(let item in content) { %>
+        <span><%= content[item] %></span>
+      <% } %>
+    </div>
     <br>
   </div>
   <span class="scroll-down"><i class="fa-solid fa-angle-down scroll-down-effects"></i></span>
 </div>
+<script>
+  const content = 'Live a good life meet slowly';
+  var delay = 0.2;
+  var spans = document.querySelectorAll(".title-rase-in span")
+  spans.forEach((item, index) => {
+    item.style.animationDelay = delay + Math.abs(index - 13)*0.05 + 's';
+  })
+</script>
