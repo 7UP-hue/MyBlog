@@ -19,17 +19,36 @@
 a {
   text-decoration: none;
 }
-.menu-item-link,.logo {
-  color: #666;
-}
-.menu-item-link:hover,.logo {
-  color: #30AD91;
-}
 .menu {
+  --primary-color: #666;
+  --secondary-color: #30AD91;
   display: flex;
 }
+.logo {
+  color: #30AD91;
+}
+.menu-item-link, {
+  display: flex;
+  color: var(--primary-color);
+  padding: 6px 1em 3px;
+  overflow: hidden;
+}
+.menu-item-link span {
+  transition: all .3s;
+  position: relative;
+}
+.menu-item-link:hover span {
+  transform: translateY(-130%);
+}
+.menu-item-link span::before {
+  position: absolute;
+  content: attr(data-text);
+  transform: translateY(130%);
+  color: var(--secondary-color);
+  transition: all .3s;
+}
+
 .menu li {
-  margin-left: 10px;
   font-size: 16px;
 }
 li {
