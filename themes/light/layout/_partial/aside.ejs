@@ -1,24 +1,24 @@
 <section>
   <div class="aside">
     <div class="aside-item">
-      <span>分类</span>
-      <ul class="post-archive category">
+      <div class="aside-title"><i class="fa-regular fa-folder-open" style="margin-right: 10px"></i>文章分类</div>
+      <div class="aside-content">
         <% site.categories.each(function (category) { %>
           <div class="aside-item-name">
             <%= category.name %>
           </div>
         <% }) %>
-      </ul>
+      </div>
     </div>
     <div class="aside-item">
-      <span>标签</span>
-      <ul class="post-archive category">
+      <div class="aside-title"><i class="fa-solid fa-clipboard" style="margin-right: 10px"></i>标签</div>
+      <div class="aside-content">
         <% site.tags.each(function (tag) { %>
           <div class="aside-item-name">
             <%= tag.name %>
           </div>
         <% }) %>
-      </ul>
+      </div>
     </div>
   </div>
 </section>

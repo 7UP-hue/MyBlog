@@ -17,9 +17,8 @@
 </div>
 <script>
   const content = 'Live a good life meet slowly';
-  var delay = 0.2;
   var spans = document.querySelectorAll(".title-rase-in span")
   spans.forEach((item, index) => {
-    item.style.animationDelay = delay + Math.abs(index - 13)*0.05 + 's';
+    item.style.animationDelay = Math.abs(index - 13)*0.05 + 's';
   })
 </script>
