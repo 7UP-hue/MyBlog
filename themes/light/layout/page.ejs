@@ -1,7 +1,10 @@
-<% if (is_current(config.category_dir)) { %>
-  <%- partial('_partial/category') %>
-<% } else if (is_current(config.tag_dir)) { %>
-  <%- partial('_partial/tag') %>
-<% } else { %>
-  <%- partial('_partial/custom') %>
-<% } %>
+<div style="display: flex; justify-content: space-between;">
+  <div style="width: 23%"><%- partial('_partial/aside') %></div>
+  <% if (is_current(config.category_dir)) { %>
+    <div style="width: 77%"><%- partial('_partial/category') %></div>
+  <% } else if (is_current(config.tag_dir)) { %>
+    <div style="width: 77%"><%- partial('_partial/tag') %></div>
+  <% } else { %>
+    <div style="width: 77%"><%- partial('_partial/custom') %></div>
+  <% } %>
+</div>  

@@ -1,7 +1,7 @@
-<% if(path == 'index.html') { %>
+<% if(is_home()) { %>
   <header class="header">
 <% } %>
-<% if(path != 'index.html') { %>
+<% if(!is_home()) { %>
   <header class="header header-last">
 <% } %>
     <div class="title">
