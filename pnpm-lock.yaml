@@ -1,7 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  hexo: ^5.0.0
+  hexo: '6'
   hexo-deployer-git: ^3.0.0
   hexo-generator-archive: ^1.0.0
   hexo-generator-category: ^1.0.0
@@ -14,7 +14,7 @@ specifiers:
   hexo-theme-landscape: ^0.0.3
 
 dependencies:
-  hexo: registry.npmmirror.com/hexo/5.4.2
+  hexo: registry.npmmirror.com/hexo/6.3.0
   hexo-deployer-git: registry.npmmirror.com/hexo-deployer-git/3.0.0
   hexo-generator-archive: registry.npmmirror.com/hexo-generator-archive/1.0.0
   hexo-generator-category: registry.npmmirror.com/hexo-generator-category/1.0.0
@@ -33,16 +33,6 @@ packages:
     name: '@tootallnate/once'
     version: 2.0.0
     engines: {node: '>= 10'}
-    dev: false
-
-  registry.npmmirror.com/JSONStream/1.3.5:
-    resolution: {integrity: sha512-E+iruNOY8VV9s4JEbe1aNEm6MiszPRr/UfcHMz0TQh1BXSxHK+ASV1R6W4HpjBhSeS+54PIsAMCBmwD06LLsqQ==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/JSONStream/-/JSONStream-1.3.5.tgz}
-    name: JSONStream
-    version: 1.3.5
-    hasBin: true
-    dependencies:
-      jsonparse: registry.npmmirror.com/jsonparse/1.3.1
-      through: registry.npmmirror.com/through/2.3.8
     dev: false
 
   registry.npmmirror.com/a-sync-waterfall/1.0.1:
@@ -140,12 +130,10 @@ packages:
     version: 1.0.0
     dev: false
 
-  registry.npmmirror.com/argparse/1.0.10:
-    resolution: {integrity: sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/argparse/-/argparse-1.0.10.tgz}
+  registry.npmmirror.com/argparse/2.0.1:
+    resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/argparse/-/argparse-2.0.1.tgz}
     name: argparse
-    version: 1.0.10
-    dependencies:
-      sprintf-js: registry.npmmirror.com/sprintf-js/1.0.3
+    version: 2.0.1
     dev: false
 
   registry.npmmirror.com/asap/2.0.6:
@@ -605,6 +593,12 @@ packages:
     engines: {node: '>= 0.6'}
     dev: false
 
+  registry.npmmirror.com/fast-equals/3.0.3:
+    resolution: {integrity: sha512-NCe8qxnZFARSHGztGMZOO/PC1qa5MIFB5Hp66WdzbCRAz8U8US3bx1UTgLS49efBQPcUtO9gf5oVEY8o7y/7Kg==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/fast-equals/-/fast-equals-3.0.3.tgz}
+    name: fast-equals
+    version: 3.0.3
+    dev: false
+
   registry.npmmirror.com/fast-levenshtein/2.0.6:
     resolution: {integrity: sha512-DCXu6Ifhqcks7TZKY3Hxp3y6qphY5SJZmrWMDrKcERSOXWQdMhU9Ig/PYrzyw/ul9jOIyh0N4M0tbC5hodg8dw==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz}
     name: fast-levenshtein
@@ -732,7 +726,7 @@ packages:
       command-exists: registry.npmmirror.com/command-exists/1.2.9
       hexo-fs: registry.npmmirror.com/hexo-fs/3.1.0
       hexo-log: registry.npmmirror.com/hexo-log/2.0.0
-      hexo-util: registry.npmmirror.com/hexo-util/2.6.1
+      hexo-util: registry.npmmirror.com/hexo-util/2.7.0
       minimist: registry.npmmirror.com/minimist/1.2.6
       resolve: registry.npmmirror.com/resolve/1.22.1
       tildify: registry.npmmirror.com/tildify/2.0.0
@@ -754,13 +748,13 @@ packages:
       - chokidar
     dev: false
 
-  registry.npmmirror.com/hexo-front-matter/2.0.0:
-    resolution: {integrity: sha512-IR3tjAyK2Ga/0a/WDAoNy5+n3ju2/mkuAsCDEeGgGLf5+7kkiOkkG/FrnueuYgz0h2MPfWDLBiDsSTCmB0sLCA==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/hexo-front-matter/-/hexo-front-matter-2.0.0.tgz}
+  registry.npmmirror.com/hexo-front-matter/3.0.0:
+    resolution: {integrity: sha512-hSQTPUmB/BCe1BFYmXRkPyLk8rqbBqHCQq+rjwwOJuEfOADrFaVK2VPZb90tJzPyXE1xSxpgCxE/AZq0CyTVwg==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/hexo-front-matter/-/hexo-front-matter-3.0.0.tgz}
     name: hexo-front-matter
-    version: 2.0.0
-    engines: {node: '>=10.13.0'}
+    version: 3.0.0
+    engines: {node: '>=12.13.0'}
     dependencies:
-      js-yaml: registry.npmmirror.com/js-yaml/3.14.1
+      js-yaml: registry.npmmirror.com/js-yaml/4.1.0
     dev: false
 
   registry.npmmirror.com/hexo-fs/3.1.0:
@@ -830,13 +824,13 @@ packages:
       chalk: registry.npmmirror.com/chalk/4.1.2
     dev: false
 
-  registry.npmmirror.com/hexo-log/3.0.0:
-    resolution: {integrity: sha512-fd87qXYznpNTa8SLov+wjDsrPssk4yKSgdIQg1wJPcuthy8ngvbXYdqaJ4vWMSADZ+D257EmKXTJHJyaxJQhVw==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/hexo-log/-/hexo-log-3.0.0.tgz}
+  registry.npmmirror.com/hexo-log/3.2.0:
+    resolution: {integrity: sha512-fk7jOW3hvKiAv4Q/d8UxaQlARwcv+5KjGcnxexUrqBqyWbMCLmw7jhMHTSRLNNQpaoTlF5ff+kQkPi4yhp9iag==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/hexo-log/-/hexo-log-3.2.0.tgz}
     name: hexo-log
-    version: 3.0.0
+    version: 3.2.0
     engines: {node: '>=12.4.0'}
     dependencies:
-      nanocolors: registry.npmmirror.com/nanocolors/0.2.13
+      picocolors: registry.npmmirror.com/picocolors/1.0.0
     dev: false
 
   registry.npmmirror.com/hexo-pagination/1.0.0:
@@ -938,35 +932,37 @@ packages:
       strip-indent: registry.npmmirror.com/strip-indent/3.0.0
     dev: false
 
-  registry.npmmirror.com/hexo/5.4.2:
-    resolution: {integrity: sha512-Af6mxKwx9byalaffKgiQ8/bZfbXPo2SGEn2Q9hFh++15g15/IulvOhu8lQkJdyZNzmj3hOuSrJdqoUvIr3K/qw==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/hexo/-/hexo-5.4.2.tgz}
+  registry.npmmirror.com/hexo/6.3.0:
+    resolution: {integrity: sha512-4Jq+rWd8sYvR1YdIQyndN/9WboQ/Mqm6eax8CjrjO+ePFm2oMVafSOx9WEyJ42wcLOHjfyMfnlQhnUuNmJIpPg==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/hexo/-/hexo-6.3.0.tgz}
     name: hexo
-    version: 5.4.2
-    engines: {node: '>=10.13.0'}
+    version: 6.3.0
+    engines: {node: '>=12.13.0'}
     hasBin: true
     dependencies:
       abbrev: registry.npmmirror.com/abbrev/1.1.1
       archy: registry.npmmirror.com/archy/1.0.0
       bluebird: registry.npmmirror.com/bluebird/3.7.2
-      chalk: registry.npmmirror.com/chalk/4.1.2
       hexo-cli: registry.npmmirror.com/hexo-cli/4.3.0
-      hexo-front-matter: registry.npmmirror.com/hexo-front-matter/2.0.0
+      hexo-front-matter: registry.npmmirror.com/hexo-front-matter/3.0.0
       hexo-fs: registry.npmmirror.com/hexo-fs/3.1.0
       hexo-i18n: registry.npmmirror.com/hexo-i18n/1.0.0
-      hexo-log: registry.npmmirror.com/hexo-log/2.0.0
-      hexo-util: registry.npmmirror.com/hexo-util/2.6.1
-      js-yaml: registry.npmmirror.com/js-yaml/3.14.1
+      hexo-log: registry.npmmirror.com/hexo-log/3.2.0
+      hexo-util: registry.npmmirror.com/hexo-util/2.7.0
+      js-yaml: registry.npmmirror.com/js-yaml/4.1.0
+      js-yaml-js-types: registry.npmmirror.com/js-yaml-js-types/1.0.0
       micromatch: registry.npmmirror.com/micromatch/4.0.5
+      moize: registry.npmmirror.com/moize/6.1.3
       moment: registry.npmmirror.com/moment/2.29.4
       moment-timezone: registry.npmmirror.com/moment-timezone/0.5.34
       nunjucks: registry.npmmirror.com/nunjucks/3.2.3
+      picocolors: registry.npmmirror.com/picocolors/1.0.0
       pretty-hrtime: registry.npmmirror.com/pretty-hrtime/1.0.3
       resolve: registry.npmmirror.com/resolve/1.22.1
       strip-ansi: registry.npmmirror.com/strip-ansi/6.0.1
       text-table: registry.npmmirror.com/text-table/0.2.0
       tildify: registry.npmmirror.com/tildify/2.0.0
       titlecase: registry.npmmirror.com/titlecase/1.1.3
-      warehouse: registry.npmmirror.com/warehouse/4.0.1
+      warehouse: registry.npmmirror.com/warehouse/4.0.2
     transitivePeerDependencies:
       - chokidar
     dev: false
@@ -1136,14 +1132,21 @@ packages:
     version: 2.0.0
     dev: false
 
-  registry.npmmirror.com/js-yaml/3.14.1:
-    resolution: {integrity: sha512-okMH7OXXJ7YrN9Ok3/SXrnu4iX9yOk+25nqX4imS2npuvTYDmo/QEZoqwZkYaIDk3jVvBOTOIEgEhaLOynBS9g==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/js-yaml/-/js-yaml-3.14.1.tgz}
+  registry.npmmirror.com/js-yaml-js-types/1.0.0:
+    resolution: {integrity: sha512-UNjPwuoaj4mcHkJCJSF6l4MgkzoFjG+JJkBXMYNvjgO3yE9gTeRt+E6PN022vduz/daZZ7HmlEiSEE36NrGE4w==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/js-yaml-js-types/-/js-yaml-js-types-1.0.0.tgz}
+    name: js-yaml-js-types
+    version: 1.0.0
+    dependencies:
+      esprima: registry.npmmirror.com/esprima/4.0.1
+    dev: false
+
+  registry.npmmirror.com/js-yaml/4.1.0:
+    resolution: {integrity: sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/js-yaml/-/js-yaml-4.1.0.tgz}
     name: js-yaml
-    version: 3.14.1
+    version: 4.1.0
     hasBin: true
     dependencies:
-      argparse: registry.npmmirror.com/argparse/1.0.10
-      esprima: registry.npmmirror.com/esprima/4.0.1
+      argparse: registry.npmmirror.com/argparse/2.0.1
     dev: false
 
   registry.npmmirror.com/jsdom/20.0.2:
@@ -1222,6 +1225,12 @@ packages:
     hasBin: true
     dev: false
 
+  registry.npmmirror.com/micro-memoize/4.0.11:
+    resolution: {integrity: sha512-CjxsaYe4j43df32DtzzNCwanPqZjZDwuQAZilsCYpa2ZVtSPDjHXbTlR4gsEZRyO9/twHs0b7HLjvy/sowl7sA==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/micro-memoize/-/micro-memoize-4.0.11.tgz}
+    name: micro-memoize
+    version: 4.0.11
+    dev: false
+
   registry.npmmirror.com/micromatch/4.0.5:
     resolution: {integrity: sha512-DMy+ERcEW2q8Z2Po+WNXuw3c5YaUSFjAO5GsJqfEl7UjvtIuFKO6ZrKvcItdy98dwFI2N1tg3zNIdKaQT+aNdA==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/micromatch/-/micromatch-4.0.5.tgz}
     name: micromatch
@@ -1285,6 +1294,15 @@ packages:
     version: 1.2.6
     dev: false
 
+  registry.npmmirror.com/moize/6.1.3:
+    resolution: {integrity: sha512-Cn+1T5Ypieeo46fn8X98V2gHj2VSRohVPjvT8BRvNANJJC3UOeege/G84xA/3S9c5qA4p9jOdSB1jfhumwe8qw==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/moize/-/moize-6.1.3.tgz}
+    name: moize
+    version: 6.1.3
+    dependencies:
+      fast-equals: registry.npmmirror.com/fast-equals/3.0.3
+      micro-memoize: registry.npmmirror.com/micro-memoize/4.0.11
+    dev: false
+
   registry.npmmirror.com/moment-timezone/0.5.34:
     resolution: {integrity: sha512-3zAEHh2hKUs3EXLESx/wsgw6IQdusOT8Bxm3D9UrHPQR7zlMmzwybC8zHEM1tQ4LJwP7fcxrWr8tuBg05fFCbg==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/moment-timezone/-/moment-timezone-0.5.34.tgz}
     name: moment-timezone
@@ -1328,12 +1346,6 @@ packages:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/ms/-/ms-2.1.3.tgz}
     name: ms
     version: 2.1.3
-    dev: false
-
-  registry.npmmirror.com/nanocolors/0.2.13:
-    resolution: {integrity: sha512-0n3mSAQLPpGLV9ORXT5+C/D4mwew7Ebws69Hx4E2sgz2ZA5+32Q80B9tL8PbL7XHnRDiAxH/pnrUJ9a4fkTNTA==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/nanocolors/-/nanocolors-0.2.13.tgz}
-    name: nanocolors
-    version: 0.2.13
     dev: false
 
   registry.npmmirror.com/negotiator/0.6.3:
@@ -1494,6 +1506,12 @@ packages:
     version: 1.0.7
     dev: false
 
+  registry.npmmirror.com/picocolors/1.0.0:
+    resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/picocolors/-/picocolors-1.0.0.tgz}
+    name: picocolors
+    version: 1.0.0
+    dev: false
+
   registry.npmmirror.com/picomatch/2.3.1:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/picomatch/-/picomatch-2.3.1.tgz}
     name: picomatch
@@ -1548,6 +1566,17 @@ packages:
     engines: {node: '>= 0.6'}
     dev: false
 
+  registry.npmmirror.com/readable-stream/3.6.0:
+    resolution: {integrity: sha512-BViHy7LKeTz4oNnkcLJ+lVSL6vpiFeX6/d3oSH8zCW7UxP2onchk+vTGB143xuFjHS3deTgkKoXXymXqymiIdA==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/readable-stream/-/readable-stream-3.6.0.tgz}
+    name: readable-stream
+    version: 3.6.0
+    engines: {node: '>= 6'}
+    dependencies:
+      inherits: registry.npmmirror.com/inherits/2.0.4
+      string_decoder: registry.npmmirror.com/string_decoder/1.3.0
+      util-deprecate: registry.npmmirror.com/util-deprecate/1.0.2
+    dev: false
+
   registry.npmmirror.com/readdirp/3.6.0:
     resolution: {integrity: sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/readdirp/-/readdirp-3.6.0.tgz}
     name: readdirp
@@ -1584,6 +1613,12 @@ packages:
     resolution: {integrity: sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/safe-buffer/-/safe-buffer-5.1.2.tgz}
     name: safe-buffer
     version: 5.1.2
+    dev: false
+
+  registry.npmmirror.com/safe-buffer/5.2.1:
+    resolution: {integrity: sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/safe-buffer/-/safe-buffer-5.2.1.tgz}
+    name: safe-buffer
+    version: 5.2.1
     dev: false
 
   registry.npmmirror.com/safer-buffer/2.1.2:
@@ -1686,12 +1721,6 @@ packages:
     engines: {node: '>= 8'}
     dev: false
 
-  registry.npmmirror.com/sprintf-js/1.0.3:
-    resolution: {integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/sprintf-js/-/sprintf-js-1.0.3.tgz}
-    name: sprintf-js
-    version: 1.0.3
-    dev: false
-
   registry.npmmirror.com/sprintf-js/1.1.2:
     resolution: {integrity: sha512-VE0SOVEHCk7Qc8ulkWw3ntAzXuqf7S2lvwQaDLRnUeIEaKNQJzV6BwmLKhOqT61aGhfUMrXeaBk+oDGCzvhcug==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/sprintf-js/-/sprintf-js-1.1.2.tgz}
     name: sprintf-js
@@ -1710,6 +1739,14 @@ packages:
     name: statuses
     version: 2.0.1
     engines: {node: '>= 0.8'}
+    dev: false
+
+  registry.npmmirror.com/string_decoder/1.3.0:
+    resolution: {integrity: sha512-hkRX8U1WjJFd8LsDJ2yQ/wWWxaopEsABU1XfkM8A+j0+85JAGppt16cr1Whg6KIbb4okU6Mql6BOj+uup/wKeA==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/string_decoder/-/string_decoder-1.3.0.tgz}
+    name: string_decoder
+    version: 1.3.0
+    dependencies:
+      safe-buffer: registry.npmmirror.com/safe-buffer/5.2.1
     dev: false
 
   registry.npmmirror.com/strip-ansi/6.0.1:
@@ -1774,10 +1811,12 @@ packages:
     version: 0.2.0
     dev: false
 
-  registry.npmmirror.com/through/2.3.8:
-    resolution: {integrity: sha512-w89qg7PI8wAdvX60bMDP+bFoD5Dvhm9oLheFp5O4a2QF0cSBGsBX4qZmadPMvVqlLJBBci+WqGGOAPvcDeNSVg==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/through/-/through-2.3.8.tgz}
-    name: through
-    version: 2.3.8
+  registry.npmmirror.com/through2/4.0.2:
+    resolution: {integrity: sha512-iOqSav00cVxEEICeD7TjLB1sueEL+81Wpzp2bY17uZjZN0pWZPuo4suZ/61VujxmqSGFfgOcNuTZ85QJwNZQpw==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/through2/-/through2-4.0.2.tgz}
+    name: through2
+    version: 4.0.2
+    dependencies:
+      readable-stream: registry.npmmirror.com/readable-stream/3.6.0
     dev: false
 
   registry.npmmirror.com/tildify/2.0.0:
@@ -1875,6 +1914,12 @@ packages:
       requires-port: registry.npmmirror.com/requires-port/1.0.0
     dev: false
 
+  registry.npmmirror.com/util-deprecate/1.0.2:
+    resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/util-deprecate/-/util-deprecate-1.0.2.tgz}
+    name: util-deprecate
+    version: 1.0.2
+    dev: false
+
   registry.npmmirror.com/utils-merge/1.0.1:
     resolution: {integrity: sha512-pMZTvIkT1d+TFGvDOqodOclx0QWkkgi6Tdoa8gC8ffGAAqz9pzPTZWAybbsHHoED/ztMtkv/VoYTYyShUn81hA==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/utils-merge/-/utils-merge-1.0.1.tgz}
     name: utils-merge
@@ -1898,19 +1943,20 @@ packages:
       xml-name-validator: registry.npmmirror.com/xml-name-validator/4.0.0
     dev: false
 
-  registry.npmmirror.com/warehouse/4.0.1:
-    resolution: {integrity: sha512-rFJYdHlk2C+pKAoV4Nlptb+b7nmBN5QOg8VkQVNMbK7jf/lDctaUF9nNehZqVoarDWS74nMpTWVDhWecWwoqQw==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/warehouse/-/warehouse-4.0.1.tgz}
+  registry.npmmirror.com/warehouse/4.0.2:
+    resolution: {integrity: sha512-GixS7SolBGu81rnxYM6bScxdElLM97Jx/kr0a6B6PGBWFqvHeuWFj7QbgEX1YWZSxiJt/aR6dBVQKC/PvvihdQ==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/warehouse/-/warehouse-4.0.2.tgz}
     name: warehouse
-    version: 4.0.1
+    version: 4.0.2
     engines: {node: '>=10.13.0'}
     dependencies:
       bluebird: registry.npmmirror.com/bluebird/3.7.2
       cuid: registry.npmmirror.com/cuid/2.1.8
       graceful-fs: registry.npmmirror.com/graceful-fs/4.2.10
-      hexo-log: registry.npmmirror.com/hexo-log/3.0.0
+      hexo-log: registry.npmmirror.com/hexo-log/3.2.0
       is-plain-object: registry.npmmirror.com/is-plain-object/5.0.0
-      JSONStream: registry.npmmirror.com/JSONStream/1.3.5
+      jsonparse: registry.npmmirror.com/jsonparse/1.3.1
       rfdc: registry.npmmirror.com/rfdc/1.3.0
+      through2: registry.npmmirror.com/through2/4.0.2
     dev: false
 
   registry.npmmirror.com/webidl-conversions/7.0.0:
