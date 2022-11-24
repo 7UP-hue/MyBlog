@@ -1,19 +1,26 @@
-<div class="w-bg">
-  <div id="stars"></div>
-  <div id="stars2"></div>
-  <div id="stars3"></div>
-</div>
-<div class="show-sth">
-  <div class="show-title">
-    <div class="title-rase-in">
-      <% var content = 'Live a good life meet slowly' %>
-      <% for(let item in content) { %>
-        <span><%= content[item] %></span>
-      <% } %>
-    </div>
-    <br>
+<% if(path == 'index.html') { %>
+  <div>
+<% } %>
+<% if(path != 'index.html') { %>
+  <div style="display: none">
+<% } %>
+  <div class="w-bg">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
   </div>
-  <span class="scroll-down"><i class="fa-solid fa-angle-down scroll-down-effects"></i></span>
+  <div class="show-sth">
+    <div class="show-title">
+      <div class="title-rase-in">
+        <% var content = 'Live a good life meet slowly' %>
+        <% for(let item in content) { %>
+          <span><%= content[item] %></span>
+        <% } %>
+      </div>
+      <br>
+    </div>
+    <span class="scroll-down"><i class="fa-solid fa-angle-down scroll-down-effects"></i></span>
+  </div>
 </div>
 <script>
   const content = 'Live a good life meet slowly';
