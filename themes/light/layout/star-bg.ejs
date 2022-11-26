@@ -12,9 +12,10 @@
   <div class="show-sth">
     <div class="show-title">
       <div class="title-rase-in">
+        <!-- <span>Live a good life meet slowly</span> -->
         <% var content = 'Live a good life meet slowly' %>
-        <% for(let item in content) { %>
-          <span><%= content[item] %></span>
+        <% for(var i = 0; i < content.length; i++) { %>
+          <span><%= content[i] %></span>
         <% } %>
       </div>
       <br>
