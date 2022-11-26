@@ -18,7 +18,7 @@
       <div class="aside-title"><i class="fa-regular fa-folder-open" style="margin-right: 10px"></i>文章分类</div>
       <div class="aside-content">
         <% site.categories.each(function (category) { %>
-          <a href="<%- 'categories' + url_for(category.name) %> " class="aside-item-name" target="_self">
+          <a href="<%- '/categories' + url_for(category.name) %> " class="aside-item-name" target="_self">
             <%= category.name %>
           </a>
         <% }) %>
@@ -28,7 +28,7 @@
       <div class="aside-title"><i class="fa-solid fa-clipboard" style="margin-right: 10px"></i>标签</div>
       <div class="aside-content">
         <% site.tags.each(function (tag) { %>
-          <a href="<%- 'tags' + url_for(tag.name) %> " class="aside-item-name" target="_self">
+          <a href="<%- '/tags' + url_for(tag.name) %> " class="aside-item-name" target="_self">
             <%= tag.name %>
           </a>
         <% }) %>
